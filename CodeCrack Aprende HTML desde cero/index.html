@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aprende a Programar</title>
+  <link rel="icon" type="image/png" href="https://static.thenounproject.com/png/7811880-42.png">
+  <link rel="stylesheet" href="Untitled-2.css">
+</head>
+<body>
+  <header>
+    <div class="star-border-container">
+      <div class="border-gradient-bottom"></div>
+      <div class="border-gradient-top"></div>
+      <div class="inner-content">
+        Introducción a la Programación
+      </div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#cursos">Cursos</a></li>
+        <li><a href="#sobre-nosotros">Sobre Nosotros</a></li>
+        <li><a href="#contacto">Contacto</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- Cursos -->
+  <section id="cursos" class="section-border section-cursos">
+    <h2>Cursos Disponibles:</h2>
+    <article class="curso">
+      <h3>Curso de HTML Básico</h3>
+      <p>Aprende los fundamentos de HTML para construir tus primeras páginas web.</p>
+      <a href="#" onclick="toggleCurso('html', this); return false;">Ver más</a>
+      <div id="detalle-html" style="display: none; margin-top: 10px;">
+        <h4>Contenido del Curso de HTML Básico</h4>
+        <ul>
+          <li>
+            <a href="#" onclick="mostrarSeccion('htmlIntro', event)">¿Qué es HTML?</a>
+            <div id="htmlIntro" style="display: none; margin-top: 10px;">
+              <p>HTML es un lenguaje increíblemente potente que te permite crear páginas web desde cero.</p>
+              <textarea id="editorHTML" style="width: 100%; height: 200px;">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Mi primera página HTML</title>
+  </head>
+  <body>
+    <p>¡Hola mundo!</p>
+  </body>
+</html>
+              </textarea>
+              <iframe id="resultadoHTML" style="width: 100%; height: 200px; border: 1px solid #ccc;"></iframe>
+              <button onclick="ejecutarCodigo('editorHTML', 'resultadoHTML')" style="margin-top: 10px;">Ejecutar código</button>
+            </div>
+          </li>
+          <li>
+            <a href="#" onclick="mostrarSeccion('etiquetasHTML', event)">Etiquetas básicas HTML</a>
+            <div id="etiquetasHTML" style="display: none; margin-top: 10px;">
+              <p>Las etiquetas básicas de HTML incluyen &lt;html&gt;, &lt;head&gt;, &lt;body&gt;, &lt;h1&gt;-&lt;h6&gt;, &lt;p&gt;, &lt;a&gt;, entre otras.</p>
+              <textarea id="editorEtiquetas" style="width: 100%; height: 100px;">
+<h1>Título principal</h1>
+<p>Este es un párrafo.</p>
+<a href="https://www.ejemplo.com">Enlace de ejemplo</a>
+              </textarea>
+              <iframe id="resultadoEtiquetas" style="width: 100%; height: 100px; border: 1px solid #ccc;"></iframe>
+              <button onclick="ejecutarCodigo('editorEtiquetas', 'resultadoEtiquetas')" style="margin-top: 10px;">Ejecutar código</button>
+            </div>
+          </li>
+          <li>
+            <a href="#" onclick="mostrarSeccion('estructuraHTML', event)">Estructura de una página</a>
+            <div id="estructuraHTML" style="display: none; margin-top: 10px;">
+              <p>La estructura básica de una página HTML incluye las etiquetas &lt;!DOCTYPE html&gt;, &lt;html&gt;, &lt;head&gt; y &lt;body&gt;.</p>
+              <textarea id="editorEstructura" style="width: 100%; height: 100px;">
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Ejemplo</title>
+  </head>
+  <body>
+    <h1>Hola</h1>
+  </body>
+</html>
+              </textarea>
+              <iframe id="resultadoEstructura" style="width: 100%; height: 100px; border: 1px solid #ccc;"></iframe>
+              <button onclick="ejecutarCodigo('editorEstructura', 'resultadoEstructura')" style="margin-top: 10px;">Ejecutar código</button>
+            </div>
+          </li>
+          <li>
+            <a href="#" onclick="mostrarSeccion('listasImagenesEnlaces', event)">Listas, imágenes y enlaces</a>
+            <div id="listasImagenesEnlaces" style="display: none; margin-top: 10px;">
+              <p>Las listas se crean con &lt;ul&gt; o &lt;ol&gt;, las imágenes con &lt;img&gt; y los enlaces con &lt;a&gt;.</p>
+              <textarea id="editorListas" style="width: 100%; height: 100px;">
+<ul>
+  <li>Elemento 1</li>
+  <li>Elemento 2</li>
+</ul>
+<img src="https://via.placeholder.com/100" alt="Imagen de ejemplo">
+<a href="https://www.google.com">Ir a Google</a>
+              </textarea>
+              <iframe id="resultadoListas" style="width: 100%; height: 120px; border: 1px solid #ccc;"></iframe>
+              <button onclick="ejecutarCodigo('editorListas', 'resultadoListas')" style="margin-top: 10px;">Ejecutar código</button>
+            </div>
+          </li>
+          <li>
+            <a href="#" onclick="mostrarSeccion('formulariosHTML', event)">Formularios</a>
+            <div id="formulariosHTML" style="display: none; margin-top: 10px;">
+              <p>Los formularios permiten a los usuarios enviar información mediante la etiqueta &lt;form&gt;.</p>
+              <textarea id="editorFormularios" style="width: 100%; height: 100px;">
+<form>
+  <label>Nombre: <input type="text" name="nombre"></label>
+  <input type="submit" value="Enviar">
+</form>
+              </textarea>
+              <iframe id="resultadoFormularios" style="width: 100%; height: 100px; border: 1px solid #ccc;"></iframe>
+              <button onclick="ejecutarCodigo('editorFormularios', 'resultadoFormularios')" style="margin-top: 10px;">Ejecutar código</button>
+            </div>
+          </li>
+          <li>
+            <a href="#" onclick="mostrarSeccion('buenasPracticasHTML', event)">Buenas prácticas</a>
+            <div id="buenasPracticasHTML" style="display: none; margin-top: 10px;">
+              <p>Utiliza indentación, comentarios y nombres claros para mantener tu código ordenado y fácil de entender.</p>
+              <textarea id="editorBuenasPracticas" style="width: 100%; height: 80px;">
+<!-- Esto es un comentario -->
+<p>¡Escribe código limpio y ordenado!</p>
+              </textarea>
+              <iframe id="resultadoBuenasPracticas" style="width: 100%; height: 80px; border: 1px solid #ccc;"></iframe>
+              <button onclick="ejecutarCodigo('editorBuenasPracticas', 'resultadoBuenasPracticas')" style="margin-top: 10px;">Ejecutar código</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="curso">
+      <h3>Curso de CSS desde Cero</h3>
+      <p>Descubre cómo darle un estilo moderno y atractivo con CSS a tus páginas.</p>
+      <a href="#" onclick="toggleCurso('css', this); return false;">Ver más</a>
+      <div id="detalle-css" style="display: none; margin-top: 10px;">
+        <h4>Contenido del Curso de CSS desde Cero</h4>
+        <ul>
+          <li>
+            <a href="#" onclick="mostrarSeccion('cssIntro', event)">¿Qué es CSS?</a>
+            <div id="cssIntro" style="display: none; margin-top: 10px;">
+              <p>CSS es el lenguaje que usamos para dar estilo y diseño a las páginas web.</p>
+              <textarea id="editorCSSIntro" style="width: 100%; height: 120px;">
+body {
+  background-color: #f0f0f0;
+}
+h1 {
+  color: blue;
+}
+              </textarea>
+              <iframe id="resultadoCSSIntro" style="width: 100%; height: 80px; border: 1px solid #ccc;"></iframe>
+              <button onclick="ejecutarCodigoCSS('editorCSSIntro', 'resultadoCSSIntro')" style="margin-top: 10px;">Ejecutar código</button>
+            </div>
+          </li>
+          <li>
+            <a href="#" onclick="mostrarSeccion('selectoresCSS', event)">Selectores y propiedades</a>
+            <div id="selectoresCSS" style="display: none; margin-top: 10px;">
+              <p>Los selectores permiten aplicar estilos a elementos específicos del HTML.</p>
+              <textarea id="editorSelectoresCSS" style="width: 100%; height: 80px;">
+p {
+  font-size: 20px;
+  color: green;
+}
+              </textarea>
+              <iframe id="resultadoSelectoresCSS" style="width: 100%; height: 60px; border: 1px solid #ccc;"></iframe>
+              <button onclick="ejecutarCodigoCSS('editorSelectoresCSS', 'resultadoSelectoresCSS')" style="margin-top: 10px;">Ejecutar código</button>
+            </div>
+          </li>
+          <li>
+            <a href="#" onclick="mostrarSeccion('maquetacionCSS', event)">Maquetación básica</a>
+            <div id="maquetacionCSS" style="display: none; margin-top: 10px;">
+              <p>CSS permite organizar el contenido en cajas y columnas.</p>
+              <textarea id="editorMaquetacionCSS" style="width: 100%; height: 100px;">
+.container {
+  display: flex;
+  gap: 10px;
+}
+.caja {
+  background: #ffd700;
+  padding: 10px;
+}
+              </textarea>
+              <iframe id="resultadoMaquetacionCSS" style="width: 100%; height: 60px; border: 1px solid #ccc;"></iframe>
+              <button onclick="ejecutarCodigoCSS('editorMaquetacionCSS', 'resultadoMaquetacionCSS')" style="margin-top: 10px;">Ejecutar código</button>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </article>
+    <article class="curso">
+  <h3>Curso de JavaScript Interactivo</h3>
+  <p>Empieza a darle vida a tus sitios web con lógica y eventos en JavaScript.</p>
+  <a href="#" onclick="toggleCurso('js', this); return false;">Ver más</a>
+  <div id="detalle-js" style="display: none; margin-top: 10px;">
+    <h4>Contenido del Curso de JavaScript Interactivo</h4>
+    <ul>
+      <li>
+        <a href="#" onclick="mostrarSeccion('jsIntro', event)">¿Qué es JavaScript?</a>
+        <div id="jsIntro" style="display: none; margin-top: 10px;">
+          <p>JavaScript es el lenguaje que permite agregar interactividad y lógica a las páginas web.</p>
+          <textarea id="editorJSIntro" style="width: 100%; height: 100px;">
+document.body.innerHTML = '<h2>¡Hola desde JavaScript!</h2>';
+          </textarea>
+          <iframe id="resultadoJSIntro" style="width: 100%; height: 80px; border: 1px solid #ccc;"></iframe>
+          <button onclick="ejecutarCodigoJS('editorJSIntro', 'resultadoJSIntro')" style="margin-top: 10px;">Ejecutar código</button>
+        </div>
+      </li>
+      <li>
+        <a href="#" onclick="mostrarSeccion('variablesJS', event)">Variables y tipos de datos</a>
+        <div id="variablesJS" style="display: none; margin-top: 10px;">
+          <p>Las variables almacenan datos. Puedes usar <code>let</code>, <code>const</code> o <code>var</code>.</p>
+          <textarea id="editorVariablesJS" style="width: 100%; height: 100px;">
+let nombre = "Ana";
+let edad = 25;
+document.body.innerHTML = `<p>Nombre: ${nombre}, Edad: ${edad}</p>`;
+          </textarea>
+          <iframe id="resultadoVariablesJS" style="width: 100%; height: 80px; border: 1px solid #ccc;"></iframe>
+          <button onclick="ejecutarCodigoJS('editorVariablesJS', 'resultadoVariablesJS')" style="margin-top: 10px;">Ejecutar código</button>
+        </div>
+      </li>
+      <li>
+        <a href="#" onclick="mostrarSeccion('eventosJS', event); return false;">Eventos y funciones</a>
+        <div id="eventosJS" style="display: none; margin-top: 10px;">
+          <p>Los eventos permiten responder a acciones del usuario, como clics.</p>
+          <textarea id="editorEventosJS" style="width: 100%; height: 100px;">
+document.body.innerHTML = '<button id="btn">Haz clic</button><p id="msg"></p>';
+document.getElementById('btn').onclick = function() {
+  document.getElementById('msg').textContent = '¡Botón clickeado!';
+};
+          </textarea>
+          <iframe id="resultadoEventosJS" style="width: 100%; height: 100px; border: 1px solid #ccc;"></iframe>
+          <button onclick="ejecutarCodigoJS('editorEventosJS', 'resultadoEventosJS')" style="margin-top: 10px;">Ejecutar código</button>
+        </div>
+      </li>
+    </ul>
+  </div>
+</article>
+  </section>
+  <!-- Sobre Nosotros -->
+  <section id="sobre-nosotros" class="section-border">
+    <h2>Sobre Nosotros</h2>
+    <p>Somos un equipo de desarrolladores apasionados por la tecnología y la educación.
+      Nuestra misión es acercar el mundo de la programación a todas las personas, sin importar su experiencia previa.
+    </p>
+  </section>
+
+  <!-- Preguntas Frecuentes -->
+  <section class="section-border faq">
+    <h2>Preguntas Frecuentes</h2>
+    <details>
+      <summary>¿Necesito experiencia previa?</summary>
+      <p>No, nuestros cursos están pensados para principiantes.</p>
+    </details>
+    <details>
+      <summary>¿Los cursos son gratuitos?</summary>
+      <p>Sí, todo el contenido es completamente gratuito.</p>
+    </details>
+    <details>
+      <summary>¿Puedo aprender a mi ritmo?</summary>
+      <p>¡Por supuesto! Puedes avanzar cuando quieras y repetir los ejercicios las veces que necesites.</p>
+    </details>
+  </section>
+
+  <!-- Contacto -->
+  <section id="contacto" class="section-border">
+    <h2>Contacto</h2>
+    <p>Envía tus dudas y comentarios a <a href="mailto:leaggarcia0123@gmail.com">leaggarcia0123@gmail.com</a></p>
+    <div class="redes-sociales">
+      <a href="https://www.instagram.com/agusvyz/" target="_blank" title="Instagram">Instagram</a>
+      <a href="#" title="X">X</a>
+      <a href="#" title="LinkedIn">LinkedIn</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2023 Aprende a Programar. Todos los derechos reservados.</p>
+  </footer>
+
+  <!-- Scripts -->
+  <script>
+    function toggleCurso(id, enlace) {
+      const detalle = document.getElementById("detalle-" + id);
+      if (detalle.style.display === "none" || detalle.style.display === "") {
+        detalle.style.display = "block";
+        enlace.textContent = "Ver menos";
+      } else {
+        detalle.style.display = "none";
+        enlace.textContent = "Ver más";
+      }
+    }
+    function mostrarSeccion(id, event) {
+      if (event) event.preventDefault();
+      const seccion = document.getElementById(id);
+      seccion.style.display = seccion.style.display === 'none' ? 'block' : 'none';
+    }
+    function ejecutarCodigo(textareaId, iframeId) {
+      const codigo = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      iframe.srcdoc = codigo;
+    }
+    function ejecutarCodigoJS(textareaId, iframeId) {
+      const js = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      iframe.srcdoc = `
+        <html>
+          <body>
+            <div id="app"></div>
+            <script>
+              try {
+                ${js}
+              } catch(e) {
+                document.body.innerHTML += '<pre style="color:red;">' + e + '</pre>';
+              }
+            <\/script>
+          </body>
+        </html>
+      `;
+    }
+    function ejecutarCodigoCSS(textareaId, iframeId) {
+      const css = document.getElementById(textareaId).value;
+      const iframe = document.getElementById(iframeId);
+      iframe.srcdoc = `<style>${css}</style><h1>¡Prueba tu CSS aquí!</h1><p>Este es un párrafo de ejemplo.</p><div class='container'><div class='caja'>Caja 1</div><div class='caja'>Caja 2</div></div>`;
+    }
+    // Scroll suave para el menú
+    document.querySelectorAll('nav ul li a').forEach(enlace => {
+      enlace.addEventListener('click', function(e) {
+        const href = this.getAttribute('href');
+        if (href.startsWith('#')) {
+          e.preventDefault();
+          const destino = document.querySelector(href);
+          if (destino) {
+            destino.scrollIntoView({ behavior: 'smooth' });
+          }
+        }
+      });
+    });
+  </script>
+  <button onclick="window.scrollTo({top: 0, behavior: 'smooth'});" style="position:fixed;bottom:30px;right:30px;padding:10px 20px;z-index:1000;">Volver arriba</button>
+</body>
+</html>

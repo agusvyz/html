@@ -1,0 +1,349 @@
+/* Reset y base */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(135deg, #e0e7ff 0%, #f9fafb 100%);
+  color: #22223b;
+  line-height: 1.7;
+  min-height: 100vh;
+  overflow-x: hidden;
+}
+
+/* Header */
+header {
+  background: transparent;
+  color: #22223b;
+  padding: 2rem 0 1rem 0;
+  text-align: center;
+  box-shadow: none;
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+/* Menú de navegación con recuadro y efecto hover */
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  margin-top: 1rem;
+}
+
+nav ul li a {
+  display: inline-block;
+  padding: 10px 24px;
+  border: 2px solid #22223b;
+  border-radius: 16px;
+  background: #fff;
+  color: #22223b;
+  font-weight: 600;
+  font-size: 1.1rem;
+  text-decoration: none;
+  transition:
+    background 0.3s,
+    color 0.3s,
+    border-color 0.3s,
+    box-shadow 0.3s;
+  box-shadow: 0 2px 8px rgba(67,97,238,0.08);
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+  background: #22223b;
+  color: #ffffff;
+  border-color: #ffffff;
+  box-shadow: 0 4px 16px rgba(67,97,238,0.18);
+}
+
+/* Animación de borde tipo StarBorder para el título */
+.star-border-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 120px;
+  margin: 2rem auto 2.5rem auto;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+  width: fit-content;
+  max-width: 100vw;
+}
+
+.border-gradient-bottom {
+  position: absolute;
+  width: 200%;
+  height: 50%;
+  opacity: 0.7;
+  bottom: -11px;
+  right: -250%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00eaff, transparent 10%);
+  animation: star-movement-bottom 5s linear infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.border-gradient-top {
+  position: absolute;
+  opacity: 0.7;
+  width: 200%;
+  height: 50%;
+  top: -10px;
+  left: -250%;
+  border-radius: 50%;
+  background: radial-gradient(circle, #00eaff, transparent 10%);
+  animation: star-movement-top 5s linear infinite alternate;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.inner-content {
+  position: relative;
+  background: rgba(34, 34, 43, 0.85); /* Gris oscuro translúcido */
+  border: 1.5px solid #00eaff;
+  color: #fff;
+  font-size: 2.5rem;
+  text-align: center;
+  padding: 32px 48px;
+  border-radius: 20px;
+  z-index: 1;
+  font-weight: bold;
+  letter-spacing: 2px;
+  box-shadow: 0 4px 32px rgba(0,234,255,0.08);
+}
+
+@keyframes star-movement-bottom {
+  0% { transform: translate(0%, 0%); opacity: 1; }
+  100% { transform: translate(-100%, 0%); opacity: 0; }
+}
+@keyframes star-movement-top {
+  0% { transform: translate(0%, 0%); opacity: 1; }
+  100% { transform: translate(100%, 0%); opacity: 0; }
+}
+
+/* Secciones principales con recuadro */
+.section-border {
+  position: relative;
+  border: 2.5px solid #a6a6e1;
+  border-radius: 20px;
+  background: #ffffffe3;
+  box-shadow: 0 4px 24px rgba(165, 176, 223, 0.288);
+  padding: 2.5rem 2rem;
+  margin-bottom: 2.5rem;
+  transition: background 0.3s, color 0.3s, border-color 0.3s;
+  overflow: hidden;
+  z-index: 1;
+}
+
+/* Efecto de inversión de colores solo en Sobre Nosotros y Contacto */
+.section-border:not(.section-cursos):not(.faq):hover {
+  background: #22223b;
+  color: #ffffff;
+  border-color: #ffffff;
+}
+
+.section-border h2,
+.section-border p,
+.section-border a {
+  transition: color 0.3s;
+}
+.section-border:not(.section-cursos):not(.faq):hover h2,
+.section-border:not(.section-cursos):not(.faq):hover p,
+.section-border:not(.section-cursos):not(.faq):hover a {
+  color: #ffffff;
+}
+
+/* Quita el efecto hover de invertir colores solo en la sección de cursos */
+.section-cursos,
+.section-cursos:hover {
+  background: #fff !important;
+  color: #22223b !important;
+  border-color: #a6a6e1 !important;
+  box-shadow: 0 4px 24px rgba(165, 176, 223, 0.288);
+}
+
+.section-cursos h2,
+.section-cursos p,
+.section-cursos a,
+.section-cursos:hover h2,
+.section-cursos:hover p,
+.section-cursos:hover a {
+  color: #22223b !important;
+}
+
+/* Cursos */
+.curso {
+  background: #fff;
+  margin-bottom: 2rem;
+  padding: 2rem 1.5rem;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(35, 43, 77, 0.829);
+  border-left: 6px solid #23466d;
+  transition: box-shadow 0.2s;
+}
+
+.curso:hover {
+  box-shadow: 0 8px 32px rgba(67, 147, 238, 0.774);
+}
+
+.curso h3 {
+  margin-bottom: 0.7rem;
+  color: #4361ee;
+  font-size: 1.5rem;
+}
+
+.curso p {
+  margin-bottom: 1.2rem;
+  color: #22223b;
+}
+
+.curso a {
+  color: #4895ef;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.2s;
+}
+
+.curso a:hover {
+  color: #130969c9;
+}
+
+/* Botón flotante */
+button[onclick*="scrollTo"] {
+  background: #4361ee;
+  color: #fff;
+  border: none;
+  border-radius: 50px;
+  box-shadow: 0 2px 8px rgba(67,97,238,0.15);
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 12px 28px;
+  transition: background 0.2s, color 0.2s;
+}
+
+button[onclick*="scrollTo"]:hover {
+  background: #ffd60a;
+  color: #22223b;
+}
+
+/* Detalles desplegables */
+.curso ul li a {
+  color: #22223b;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: color 0.2s;
+}
+
+.curso ul li a:hover {
+  color: #4895ef;
+}
+
+.curso ul li div {
+  background: #f1f3f8;
+  border-radius: 10px;
+  margin-top: 0.7rem;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(67,97,238,0.06);
+}
+
+textarea {
+  width: 100%;
+  border-radius: 8px;
+  border: 1px solid #bfc9d9;
+  padding: 0.7rem;
+  font-family: 'Fira Mono', 'Consolas', monospace;
+  font-size: 1rem;
+  background: #f8fafc;
+  margin-bottom: 0.7rem;
+  resize: vertical;
+  transition: border 0.2s;
+}
+
+textarea:focus {
+  border: 1.5px solid #4895ef;
+  outline: none;
+}
+
+iframe {
+  border-radius: 8px;
+  background: #fff;
+  margin-bottom: 0.7rem;
+}
+
+button {
+  background: #4895ef;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 8px 18px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s;
+}
+
+button:hover {
+  background: #ffd60a;
+  color: #22223b;
+}
+
+/* FAQ */
+.faq details {
+  margin-bottom: 1rem;
+  background: #dbdce3;
+  border-radius: 10px;
+  padding: 1rem;
+  box-shadow: 0 1px 4px rgba(67,97,238,0.06);
+  cursor: pointer;
+}
+.faq summary {
+  font-weight: bold;
+  color: #4361ee;
+  cursor: pointer;
+}
+
+/* Redes sociales */
+.redes-sociales {
+  margin-top: 1.2rem;
+}
+.redes-sociales a {
+  display: inline-block;
+  margin-right: 1rem;
+  color: #4895ef;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+.redes-sociales a:hover {
+  color: #ffd60a;
+}
+
+/* Footer links */
+footer a {
+  color: #ffd60a;
+  text-decoration: underline;
+  margin: 0 0.5rem;
+  font-size: 0.95rem;
+}
+footer a:hover {
+  color: #00eaff;
+}
+
+/* Responsive */
+@media (max-width: 700px) {
+  section {
+    padding: 1rem 0.5rem;
+  }
+  .curso {
+    padding: 1rem 0.5rem;
+  }
+  nav ul {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+}
